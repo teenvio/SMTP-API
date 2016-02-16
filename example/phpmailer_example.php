@@ -44,10 +44,10 @@ $mail->Debugoutput = 'text';
 $mail->Host = 'api.teenvio.com';
 
 //Set the SMTP port number
-$mail->Port = 46500;
+$mail->Port = 58700;
 
 //Set the encryption system to use: ssl
-$mail->SMTPSecure = 'ssl';
+$mail->SMTPSecure = 'tls';
 
 //Whether to use SMTP authentication
 $mail->SMTPAuth = true;
