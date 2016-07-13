@@ -38,7 +38,7 @@ $mail->isSMTP();
 $mail->SMTPDebug = 2;
 
 //Ask for HTML-friendly debug output
-$mail->Debugoutput = 'text';
+$mail->Debugoutput = 'html';
 
 //Set the hostname of the mail server
 $mail->Host = 'api.teenvio.com';
@@ -103,8 +103,11 @@ $mail->AltBody = '
 
 //send the message, check for errors
 if (!$mail->send()) {
-    echo "Mailer Error: " . $mail->ErrorInfo;
+    echo "<br>Mailer Error: " . $mail->ErrorInfo;
+    echo "<br><br>Details:<pre>";
+    print_r($mail->getSMTPInstance()->getError());
+    echo "</pre>";
 } else {
-    echo "Message sent!";
+    echo "<br>Message sent!";
 }
 ?>
