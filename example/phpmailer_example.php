@@ -65,7 +65,7 @@ $mail->Password = "pass";
 $mail->setFrom('info@teenvio.com', 'teenvio');
 
 //Set who the message is to be sent to
-$mail->addAddress('victor@ipdea.com', 'Víctor J. Chamorro');
+$mail->addAddress('contact@host.com', 'Test contact');
 
 //Set the subject line
 $mail->Subject = 'PHPMailer Teenvio SMTP test';
