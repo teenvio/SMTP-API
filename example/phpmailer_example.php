@@ -70,22 +70,28 @@ $mail->addAddress('contact@host.com', 'Test contact');
 //Set the subject line
 $mail->Subject = 'PHPMailer Teenvio SMTP test';
 
+//Custom options (see doc)
+// https://github.com/teenvio/SMTP-API/blob/master/doc/SMTP-API_es.pdf
+
+$mail->addCustomHeader('X-Teenvio-ShowCab', 'yes');
+$mail->addCustomHeader('X-Teenvio-SocialLinks', 'no');
+$mail->addCustomHeader('X-Teenvio-Language', '3');
+$mail->addCustomHeader('X-Teenvio-TrackingOpening', 'yes');
+$mail->addCustomHeader('X-Teenvio-TrackingClicks', 'yes');
+
 //Read an HTML message body from an external file, convert referenced images to embedded,
 //convert HTML into a basic plain-text alternative body
 $mail->msgHTML('
 
 <html>
-<head>
-  <meta http­equiv="content­type" content="text/html; charset=ISO­8859­1">
-</head>
 <body bgcolor="#FFFFFF" text="#000000">
  Buenas,<br>
  <br>
- Esto es un email <b>html</b> para probar el servidor smtp­api de teenvio<br>
+ Esto es un email <b>html</b> para probar el servidor smtp-api de teenvio<br>
  <br>
  Un saludo,<br>
  <br>
- <u>V&iacute;ctor J. Chamorro</u> ­ teenvio.com<br>
+ <u>V&iacute;ctor J. Chamorro</u> - teenvio.com<br>
  <br>
 </body>
 </html>
@@ -97,9 +103,9 @@ $mail->msgHTML('
 $mail->AltBody = '
 
  Buenas,
- Esto es un email *html* para probar el servidor smtp­api de teenvio
+ Esto es un email *html* para probar el servidor smtp-api de teenvio
  Un saludo,
- _Victor J. Chamorro_ ­ teenvio.com
+ _Victor J. Chamorro_ - teenvio.com
 
 
 ';
