@@ -56,10 +56,10 @@ $mail->SMTPSecure = 'tls';
 $mail->SMTPAuth = true;
 
 //Username to use for SMTP authentication - use full user for teenvio
-$mail->Username = "victor.teenviocluster02";
+$mail->Username = "user.plan";
 
 //Password to use for SMTP authentication
-$mail->Password = "v2mmcCMH";
+$mail->Password = "pass";
 
 //Set who the message is to be sent from
 $mail->setFrom('info@teenvio.com', 'teenvio');
