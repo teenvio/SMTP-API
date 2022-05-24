@@ -19,7 +19,10 @@
  *
  */
 
-require 'lib/PHPMailer/PHPMailerAutoload.php';
+require './vendor/autoload.php';
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
 //SMTP needs accurate times, and the PHP time zone MUST be set
 //This should be done in your php.ini, but this is how to do it if you don't have access to that
@@ -41,7 +44,7 @@ $mail->SMTPDebug = 2;
 $mail->Debugoutput = 'html';
 
 //Set the hostname of the mail server
-$mail->Host = 'api.teenvio.com';
+$mail->Host = 'app.teenvio.com';
 
 //Set the SMTP port number
 $mail->Port = 58700;
@@ -53,16 +56,16 @@ $mail->SMTPSecure = 'tls';
 $mail->SMTPAuth = true;
 
 //Username to use for SMTP authentication - use full user for teenvio
-$mail->Username = "[user].[plan]";
+$mail->Username = "victor.teenviocluster02";
 
 //Password to use for SMTP authentication
-$mail->Password = "[password]";
+$mail->Password = "v2mmcCMH";
 
 //Set who the message is to be sent from
 $mail->setFrom('info@teenvio.com', 'teenvio');
 
 //Set who the message is to be sent to
-$mail->addAddress('victor@dominio.com', 'Víctor J. Chamorro');
+$mail->addAddress('victor@ipdea.com', 'Víctor J. Chamorro');
 
 //Set the subject line
 $mail->Subject = 'PHPMailer Teenvio SMTP test';
