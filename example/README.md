@@ -1,8 +1,10 @@
 
-Install:
+## INSTALL:
 
-`composer install`
+`$ composer install`
 
-Depends:
+## RUN TEST:
 
-- phpmailer
+Edit the credential data and run:
+
+`$ php phpmailer_example.php`
